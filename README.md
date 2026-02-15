@@ -54,8 +54,11 @@ agent-cowork/
 │   ├── AUDIT_LOG.md           # Red-team audit template (5-area checklist)
 │   ├── STATE.yaml             # Initial protocol state
 │   └── CHECKLIST.md           # Per-phase completion checklist
-└── archive/                   # Superseded documents (historical reference)
-    └── plan_rev2.md           # Original Korean protocol plan
+└── archive/                   # Superseded documents (historical reference only)
+    ├── plan_rev2.md           # Original Korean protocol plan
+    ├── README.original.md     # Original English README (pre-transformation)
+    ├── LANGUAGE_POLICY.original.md  # Original Korean language policy
+    └── TITLE_Protocol_v3_Project_Proposal.docx  # Original project proposal
 ```
 
 ---
