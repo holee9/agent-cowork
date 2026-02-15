@@ -1,0 +1,63 @@
+{
+  "_comment": "TITLE Protocol v3.0 -- BLUEPRINT Template. Claude Code owns this artifact. All fields below are REQUIRED for the Thesis-to-Antithesis quality gate.",
+
+  "project_name": "REPLACE_WITH_PROJECT_NAME",
+  "version": "0.1.0",
+  "cycle": 1,
+  "last_updated": "YYYY-MM-DD",
+
+  "core_principles": [
+    "Security First -- security and stability are first-class requirements",
+    "Stateless Design -- all state persisted in explicit files, agents restartable at any time",
+    "REPLACE_WITH_PROJECT_SPECIFIC_PRINCIPLE"
+  ],
+  "_comment_core_principles": "Array of guiding principles. Minimum 1 entry required. Include Security First and Stateless Design by default.",
+
+  "constraints": {
+    "network": "REPLACE_WITH_NETWORK_CONSTRAINTS",
+    "deployment": "REPLACE_WITH_DEPLOYMENT_CONSTRAINTS"
+  },
+  "_comment_constraints": "Object with at least 1 key. Document hard boundaries the design must respect (network, deployment, compliance, budget, etc.).",
+
+  "tech_stack": {
+    "language": "REPLACE_WITH_PRIMARY_LANGUAGE",
+    "framework": "REPLACE_WITH_PRIMARY_FRAMEWORK"
+  },
+  "_comment_tech_stack": "Required: language and framework. Add runtime, database, infrastructure keys as needed.",
+
+  "io_contracts": {
+    "REPLACE_WITH_ENDPOINT_OR_INTERFACE_NAME": {
+      "method": "GET | POST | PUT | DELETE | N/A",
+      "path": "/api/v1/example",
+      "request": {
+        "content_type": "application/json",
+        "schema": "REPLACE_WITH_REQUEST_SCHEMA_OR_REF"
+      },
+      "response": {
+        "content_type": "application/json",
+        "schema": "REPLACE_WITH_RESPONSE_SCHEMA_OR_REF"
+      },
+      "errors": [
+        { "code": 400, "description": "Bad Request" },
+        { "code": 401, "description": "Unauthorized" }
+      ]
+    }
+  },
+  "_comment_io_contracts": "Define every external-facing endpoint or interface contract. Each entry must specify method, path, request/response schema, and error codes.",
+
+  "security_policies": {
+    "authentication": "REPLACE_WITH_AUTH_METHOD (e.g., JWT, mTLS, API key)",
+    "authorization": "REPLACE_WITH_AUTHZ_MODEL (e.g., RBAC, ABAC)",
+    "data_handling": "REPLACE_WITH_DATA_CLASSIFICATION_AND_HANDLING_RULES",
+    "encryption": "REPLACE_WITH_ENCRYPTION_REQUIREMENTS (e.g., TLS 1.3, AES-256 at rest)"
+  },
+  "_comment_security_policies": "Required fields: authentication, authorization, data_handling, encryption. Add audit_logging, secrets_management, etc. as needed.",
+
+  "non_functional_requirements": {
+    "performance": "REPLACE_WITH_LATENCY_AND_THROUGHPUT_TARGETS",
+    "scalability": "REPLACE_WITH_SCALING_STRATEGY_AND_LIMITS",
+    "availability": "REPLACE_WITH_UPTIME_TARGET (e.g., 99.9%)",
+    "observability": "REPLACE_WITH_LOGGING_METRICS_TRACING_REQUIREMENTS"
+  },
+  "_comment_non_functional_requirements": "Required fields: performance, scalability, availability, observability. Quantify targets wherever possible."
+}

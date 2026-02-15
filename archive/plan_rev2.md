@@ -1,4 +1,6 @@
-# TITLE Protocol v3.0 AI – Multi‑Agent System (Claude Code × GPT‑5.3‑Codex 기반)
+> **ARCHIVED** -- This document has been superseded by [PROTOCOL.md](../PROTOCOL.md). Retained for historical reference.
+
+# TITLE Protocol v3.0 AI -- Multi-Agent System (Claude Code x GPT-5.3-Codex 기반)
 
 작성일: 2026‑02‑14
 작성자: System Owner

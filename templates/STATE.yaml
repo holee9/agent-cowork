@@ -1,0 +1,52 @@
+# TITLE Protocol v3.0 -- STATE.yaml Template
+# This file tracks protocol state across all four phases.
+# Updated at every phase transition and blocker status change.
+
+# Current protocol phase.
+# Valid values: THESIS, ANTITHESIS, SYNTHESIS, EXECUTION
+phase: THESIS
+
+# The model currently leading the phase.
+# Valid values: Claude, Codex
+# Thesis/Synthesis -> Claude; Antithesis/Execution -> Codex
+owner_model: Claude
+
+# The model blocking consensus, if any.
+# Set to Claude or Codex when one side blocks progress.
+# null when no consensus issue exists.
+blocking_model: null
+
+# Overall protocol status.
+# OK              -- normal operation
+# BLOCKED         -- a blocker prevents phase transition
+# CONSENSUS_BLOCKED -- agents cannot agree; System Owner intervention required
+status: OK
+
+# Current cycle number. Increments after each complete
+# Thesis -> Antithesis -> Synthesis -> Execution pass.
+cycle: 1
+
+# SHA hashes of the latest committed versions of key artifacts.
+# Empty strings indicate the artifact has not been created yet.
+last_artifacts:
+  blueprint_sha: ""
+  audit_log_sha: ""
+  src_sha: ""
+
+# Free-text notes from the outgoing agent to the incoming agent.
+# Used during handoff to transfer context that is not captured in artifacts.
+handoff_notes: ""
+
+# List of open blockers. Each blocker tracks a critical issue
+# that must be resolved before the next phase transition.
+#
+# Blocker schema:
+#   id:         Unique identifier (e.g., BLK-001)
+#   title:      Short description of the issue
+#   owner:      Responsible party (Claude | Codex | SystemOwner)
+#   status:     Current status (OPEN | ACCEPTED | DEFERRED | REJECTED)
+#   severity:   Impact level (CRITICAL | HIGH | MEDIUM | LOW)
+#   area:       Audit area (Memory | Concurrency | Hardware | Security | AI_Misuse)
+#   reason:     Rationale for the current status (required for DEFERRED/REJECTED)
+#   updated_at: ISO 8601 timestamp of last status change
+blockers: []

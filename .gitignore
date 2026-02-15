@@ -1,0 +1,25 @@
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Node (if consumer projects use JS tooling)
+node_modules/
+
+# Python (if consumer projects use Python tooling)
+__pycache__/
+*.pyc
+.venv/
+
+# Do NOT ignore protocol artifacts
+# !.aisync/
+# !templates/
